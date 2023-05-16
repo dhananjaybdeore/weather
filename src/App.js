@@ -10,7 +10,7 @@ function App() {
   const onSubmitHandler = () => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${inputValue}`
+        `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=${inputValue}`
       )
       .then((fetchedData) => {
         setData(fetchedData.data);
@@ -23,7 +23,7 @@ function App() {
   useState(() => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=Mumbai&aqi=no`
+        `https://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_WEATHER_API_KEY}&q=Mumbai&aqi=no`
       )
       .then((fetchedData) => {
         // console.log(data);
