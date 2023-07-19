@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import axios from "axios";
+// import DevisionD from "./components/DivisionD";
+import DivisionA from "./components/DivisionA";
 function App() {
   const [data, setData] = useState(null);
   const [inputValue, setInputValue] = useState("");
@@ -51,6 +53,10 @@ function App() {
             <img src={data.current.condition.icon} alt="icon-of-weather"></img>
             <div>Temperature: {data.current.temp_c} Degree Celcius</div>
           </div>
+          <section>
+            {/* <DevisionD /> */}
+            <DivisionA />
+          </section>
         </div>
       )}
     </div>
